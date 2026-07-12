@@ -34,6 +34,7 @@ Dengan modal awal dan target penduduk, diperoleh dua persamaan linear:
 Jika modal awal yang diberikan pada program adalah **$10.000** dan target penduduk **100.000 jiwa**, maka SPL menjadi:
 
 1000x + 3000y = 10000
+
 15000x + 20000y = 100000
 
 ## Bentuk Matriks (Ax = b)
