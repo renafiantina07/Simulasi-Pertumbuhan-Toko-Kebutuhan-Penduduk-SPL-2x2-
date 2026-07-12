@@ -12,8 +12,8 @@
 # 2. Pemodelan Matematika
 
 Berdasarkan narasi cerita, terdapat dua variabel yang dicari:
-- `x` = jumlah Toko Standar (Tipe X)
-- `y` = jumlah Toko Besar (Tipe Y)
+- x = jumlah Toko Standar (Tipe X)
+- y = jumlah Toko Besar (Tipe Y)
 
 ## Data Konstanta
 
@@ -50,8 +50,8 @@ Kode program ditulis dalam bahasa C dan hanya menggunakan fungsi `main()`. Konse
 ## a. Fungsi Utama (`main`)
 
 1. **Deklarasi variabel**
-   - `modal` dan `penduduk` sebagai input dari pengguna.
-   - `biayaX`, `biayaY`, `kapasitasX`, dan `kapasitasY` sebagai konstanta tetap sesuai soal.
+   - modal dan penduduk sebagai input dari pengguna.
+   - biayaX, biayaY, kapasitasX, dan kapasitasY sebagai konstanta tetap sesuai soal.
 
 2. **Input interaktif**
    - Pengguna diminta memasukkan nilai modal dan jumlah penduduk melalui terminal.
