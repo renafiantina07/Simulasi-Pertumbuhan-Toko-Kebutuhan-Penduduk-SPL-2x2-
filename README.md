@@ -2,10 +2,10 @@
 
 ## 1. Identitas
 
-- **Nama** : Rena Fiantina
-- **NIM** : 251511028
-- **Kelas** : 1A - D3
-- **Tanggal Pengerjaan** : 12 Juli 2026
+- Nama : Rena Fiantina
+- NIM : 251511028
+- Kelas : 1A - D3
+- Tanggal Pengerjaan : 12 Juli 2026
 
 
 
