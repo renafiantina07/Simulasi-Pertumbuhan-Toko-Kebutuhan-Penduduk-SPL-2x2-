@@ -31,7 +31,7 @@ Dengan modal awal dan target penduduk, diperoleh dua persamaan linear:
 2. Persamaan kapasitas penduduk
    15000x + 20000y = target penduduk
 
-Jika modal awal yang diberikan pada program adalah **$10.000** dan target penduduk **100.000 jiwa**, maka SPL menjadi:
+Jika modal awal yang diberikan pada program adalah $10.000 dan target penduduk 100.000 jiwa, maka SPL menjadi:
 
 1000x + 3000y = 10000
 
@@ -46,9 +46,9 @@ Jika modal awal yang diberikan pada program adalah **$10.000** dan target pendud
 
 # 3. Logika Kode Program
 
-Kode program ditulis dalam bahasa C dan hanya menggunakan fungsi `main()`. Konsep utama yang diterapkan adalah **Aturan Cramer** untuk menyelesaikan Sistem Persamaan Linear (SPL) 2×2.
+Kode program ditulis dalam bahasa C dan hanya menggunakan fungsi main(). Konsep utama yang diterapkan adalah Aturan Cramer untuk menyelesaikan Sistem Persamaan Linear (SPL) 2×2.
 
-## a. Fungsi Utama (`main`)
+## a. Fungsi Utama (main)
 
 1. **Deklarasi variabel**
    - modal dan penduduk sebagai input dari pengguna.
@@ -61,7 +61,7 @@ Kode program ditulis dalam bahasa C dan hanya menggunakan fungsi `main()`. Konse
    - Program mencetak kembali persamaan linear yang terbentuk agar pengguna dapat memverifikasi data yang dimasukkan.
 
 4. **Perhitungan determinan**
-   - Program menghitung nilai determinan matriks koefisien (`D`) serta determinan pengganti (`Dx` dan `Dy`) menggunakan Aturan Cramer.
+   - Program menghitung nilai determinan matriks koefisien (D) serta determinan pengganti (Dx dan Dy) menggunakan Aturan Cramer.
 
 5. **Pengecekan syarat D ≠ 0**
    - Jika determinan bernilai nol, program akan berhenti karena SPL tidak memiliki solusi tunggal.
@@ -115,8 +115,8 @@ Selain itu, dalam implementasi program, apabila D = 0 maka proses pembagian Dx/D
 
 ## a. Uji Coba Parameter: Modal $5.000 dengan Penduduk Tetap 100.000 Jiwa
 Input yang diberikan:
-- **Modal** = 5000
-- **Penduduk** = 100000
+- Modal = 5000
+- Penduduk = 100000
 
 Hasil perhitungan program:
 - D = -25.000.000,00
@@ -128,11 +128,11 @@ Solusi SPL:
 - y = -1 (Toko Besar)
 
 ## b. Apakah Hasilnya Masuk Akal Secara Fisik?
-Hasil tersebut **tidak masuk akal secara fisik**, karena jumlah toko tidak mungkin bernilai negatif.
+Hasil tersebut tidak masuk akal secara fisik, karena jumlah toko tidak mungkin bernilai negatif.
 
 Walaupun nilai x = 8 merupakan bilangan bulat positif, nilai y = -1 menunjukkan bahwa sistem persamaan memerlukan "jumlah toko negatif" agar kedua persamaan terpenuhi. Hal tersebut tidak mungkin terjadi dalam dunia nyata.
 
-Secara praktis, kombinasi modal sebesar **$5.000** dengan target pelayanan **100.000 penduduk** tidak dapat direalisasikan menggunakan data biaya dan kapasitas yang diberikan.
+Secara praktis, kombinasi modal sebesar $5.000 dengan target pelayanan 100.000 penduduk tidak dapat direalisasikan menggunakan data biaya dan kapasitas yang diberikan.
 Karena itu program memberikan peringatan bahwa hasil perhitungan tidak layak diterapkan.
 Contoh pesan yang ditampilkan program:
 
@@ -155,7 +155,7 @@ gcc --version
 
 ## b. Kompilasi
 
-Simpan program dengan nama `kasus1.c`, kemudian jalankan:
+Simpan program dengan nama kasus1.c, kemudian jalankan:
 
 ```bash
 gcc kasus1.c 
@@ -188,7 +188,7 @@ x (Toko Standar) = 4.00 unit
 y (Toko Besar) = 2.00 unit
 ```
 
-Contoh di atas menggunakan data standar pada soal, yaitu modal **$10.000** dan target **100.000 penduduk**, sehingga diperoleh solusi:
+Contoh di atas menggunakan data standar pada soal, yaitu modal $10.000 dan target 100.000 penduduk, sehingga diperoleh solusi:
 
 - x = 4 unit Toko Standar
 - y = 2 unit Toko Besar
