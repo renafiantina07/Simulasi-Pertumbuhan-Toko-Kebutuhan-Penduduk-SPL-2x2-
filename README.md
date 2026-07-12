@@ -240,7 +240,7 @@ Dari data di atas diperoleh sistem persamaan linear:
 
 # 3. Logika Kode Program
 
-Kode program ditulis dalam bahasa C menggunakan pendekatan modular. Program dibagi menjadi beberapa fungsi sehingga setiap fungsi memiliki tugas tertentu. Metode penyelesaian SPL yang digunakan adalah Aturan Cramer untuk matriks 3×3.
+Kode program ditulis dalam bahasa C dengan modular. Program dibagi menjadi beberapa fungsi sehingga tidak perlu menuliskan kode yang sama berulang kali. Metode penyelesaian SPL yang digunakan adalah Aturan Cramer untuk matriks 3×3.
 
 ## a. Fungsi-fungsi dalam Program
 
@@ -252,11 +252,9 @@ Rumus yang digunakan:
 
 det = (a × d) - (b × c)
 
-Fungsi ini menjadi dasar dalam perhitungan determinan matriks 3×3.
-
 ### 2. Fungsi determinan3x3()
 
-Fungsi ini digunakan untuk menghitung determinan matriks 3×3 menggunakan metode ekspansi kofaktor pada baris pertama.
+Fungsi ini digunakan untuk menghitung determinan matriks 3×3 menggunakan metode ekspansi kofaktor pada baris pertama dengan bantuan fungsi minor2x2. 
 
 Untuk matriks:
 
@@ -270,7 +268,7 @@ Determinan dihitung menggunakan rumus:
 
 det = a(ei - fh) - b(di - fg) + c(dh - eg)
 
-Dalam implementasinya, setiap minor dihitung menggunakan fungsi minor2x2().
+Dan setiap minor (operasi pengurangan dalam kurung) dihitung menggunakan fungsi minor2x2().
 
 ### 3. Fungsi gantiKolom()
 
@@ -337,11 +335,9 @@ z = Dz / D
 
 ## c. Mengapa Syarat D ≠ 0 Wajib Diperiksa?
 
-Nilai determinan menentukan apakah SPL memiliki solusi tunggal.
+Sama seperti yang dikasus sebelumnya, nilai determinan menentukan apakah SPL memiliki solusi tunggal.
 
-Jika D ≠ 0, matriks koefisien memiliki invers sehingga solusi dapat dihitung menggunakan Aturan Cramer.
-
-Sebaliknya, jika D = 0 maka:
+Jika D ≠ 0, matriks koefisien memiliki invers sehingga solusi dapat dihitung menggunakan Aturan Cramer. Sebaliknya, jika D = 0 maka:
 
 - SPL tidak memiliki solusi.
 - SPL memiliki tak hingga solusi.
@@ -441,14 +437,6 @@ gcc kasus2.c -o kasus2
 ```
 
 ## c. Menjalankan Program
-
-Linux/macOS:
-
-```bash
-./kasus2
-```
-
-Windows:
 
 ```bash
 kasus2.exe
