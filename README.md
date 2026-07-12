@@ -7,7 +7,7 @@
 - **Kelas** : 1A - D3
 - **Tanggal Pengerjaan** : 12 Juli 2026
 
----
+
 
 # 2. Pemodelan Matematika
 
