@@ -12,7 +12,6 @@
 # 2. Pemodelan Matematika
 
 Berdasarkan narasi cerita, terdapat dua variabel yang dicari:
-
 - `x` = jumlah Toko Standar (Tipe X)
 - `y` = jumlah Toko Besar (Tipe Y)
 
@@ -25,20 +24,15 @@ Berdasarkan narasi cerita, terdapat dua variabel yang dicari:
 
 ## Pembentukan SPL
 
-Dengan modal awal **M** dan target penduduk **P**, diperoleh dua persamaan linear:
-
+Dengan modal awal dan target penduduk, diperoleh dua persamaan linear:
 1. Persamaan modal (biaya total)
-
-   1000x + 3000y = M
+   1000x + 3000y = modal awal
 
 2. Persamaan kapasitas penduduk
-
-   15000x + 20000y = P
+   15000x + 20000y = target penduduk
 
 Jika modal awal yang diberikan pada program adalah **$10.000** dan target penduduk **100.000 jiwa**, maka SPL menjadi:
-
 1000x + 3000y = 10000
-
 15000x + 20000y = 100000
 
 ## Bentuk Matriks (Ax = b)
@@ -47,12 +41,6 @@ Jika modal awal yang diberikan pada program adalah **$10.000** dan target pendud
 | 1000   3000 |   | x |   =   | 10000  |
 |15000  20000 | × | y |       |100000  |
 ```
-
-atau dapat dituliskan sebagai:
-
-A × x = b
-
----
 
 # 3. Logika Kode Program
 
@@ -80,7 +68,6 @@ Kode program ditulis dalam bahasa C dan hanya menggunakan fungsi `main()`. Konse
    - Nilai variabel dihitung menggunakan rumus:
 
      x = Dx / D
-
      y = Dy / D
 
 7. **Analisis hasil**
@@ -89,99 +76,72 @@ Kode program ditulis dalam bahasa C dan hanya menggunakan fungsi `main()`. Konse
 ## b. Logika Pencarian Determinan
 
 Untuk matriks:
-
 ```
 | a  b |
 | c  d |
 ```
-
 Rumus determinannya adalah:
-
 D = (a × d) - (b × c)
-
 Pada program, nilai variabel dipetakan sebagai berikut:
-
 - a = biayaX = 1000
 - b = biayaY = 3000
 - c = kapasitasX = 15000
 - d = kapasitasY = 20000
 
 Selanjutnya dihitung:
-
 Dx = (M × d) - (b × P)
-
 Dy = (a × P) - (M × c)
 
 Kemudian solusi diperoleh dari:
-
 x = Dx / D
-
 y = Dy / D
 
 ## c. Mengapa Syarat D ≠ 0 Wajib Diperiksa?
 
 Nilai determinan menentukan apakah SPL mempunyai solusi tunggal atau tidak.
-
-Jika **D ≠ 0**, matriks koefisien memiliki invers sehingga solusi dapat dihitung menggunakan Aturan Cramer.
-
-Sebaliknya, jika **D = 0**, maka terdapat dua kemungkinan:
-
+Jika D ≠ 0, matriks koefisien memiliki invers sehingga solusi dapat dihitung menggunakan Aturan Cramer.
+Sebaliknya, jika D = 0, maka terdapat dua kemungkinan:
 - SPL tidak memiliki solusi.
 - SPL memiliki tak hingga banyak solusi.
-
 Selain itu, dalam implementasi program, apabila D = 0 maka proses pembagian Dx/D maupun Dy/D akan menyebabkan **division by zero** sehingga menghasilkan error atau nilai `inf`. Oleh karena itu, program harus memeriksa nilai determinan terlebih dahulu sebelum menghitung solusi.
 
 ---
 
-# 4. Analisis Batas (Critical Thinking)
-
-Saya melakukan uji coba dengan mengubah parameter input pada program yang telah dibuat.
+# 4. Analisis Batas 
 
 ## a. Uji Coba Parameter: Modal $5.000 dengan Penduduk Tetap 100.000 Jiwa
-
 Input yang diberikan:
-
 - **Modal** = `5000`
 - **Penduduk** = `100000`
 
 Hasil perhitungan program:
-
 - D = -25.000.000,00
 - Dx = -200.000.000,00 sehingga x = 8,00
 - Dy = 25.000.000,00 sehingga y = -1,00
 
 Solusi SPL:
-
 - x = 8 (Toko Standar)
 - y = -1 (Toko Besar)
 
 ## b. Apakah Hasilnya Masuk Akal Secara Fisik?
-
 Hasil tersebut **tidak masuk akal secara fisik**, karena jumlah toko tidak mungkin bernilai negatif.
-
 Walaupun nilai x = 8 merupakan bilangan bulat positif, nilai y = -1 menunjukkan bahwa sistem persamaan memerlukan "jumlah toko negatif" agar kedua persamaan terpenuhi. Hal tersebut tidak mungkin terjadi dalam dunia nyata.
-
 Secara matematis, solusi SPL memang benar. Namun secara praktis, kombinasi modal sebesar **$5.000** dengan target pelayanan **100.000 penduduk** tidak dapat direalisasikan menggunakan data biaya dan kapasitas yang diberikan.
-
 Karena itu program memberikan peringatan bahwa hasil perhitungan tidak layak diterapkan.
-
 Contoh pesan yang ditampilkan program:
 
 ```text
 Catatan: jumlah toko bernilai negatif, sehingga tidak masuk akal secara fisik.
 ```
-
 Hal ini menunjukkan bahwa program tidak hanya menghitung solusi matematika, tetapi juga melakukan validasi sederhana terhadap kelayakan hasil.
-
 ---
 
 # 5. Panduan Kompilasi
 
 Program ini ditulis menggunakan bahasa C standar dan dapat dikompilasi menggunakan GCC.
-
 ## a. Persiapan
 
-Pastikan compiler GCC telah terpasang.
+Pastikan compiler GCC terpasang.
 
 ```bash
 gcc --version
@@ -192,20 +152,9 @@ gcc --version
 Simpan program dengan nama `kasus1.c`, kemudian jalankan:
 
 ```bash
-gcc kasus1.c -o kasus1
+gcc kasus1.c 
 ```
-
-Opsi `-o kasus1` digunakan untuk memberi nama file hasil kompilasi.
-
 ## c. Menjalankan Program
-
-Linux / macOS:
-
-```bash
-./kasus1
-```
-
-Windows:
 
 ```bash
 kasus1.exe
