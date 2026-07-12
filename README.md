@@ -139,7 +139,7 @@ Contoh pesan yang ditampilkan program:
 Catatan: jumlah toko bernilai negatif, sehingga tidak masuk akal secara fisik.
 ```
 Hal ini menunjukkan bahwa program tidak hanya menghitung solusi matematika, tetapi juga melakukan validasi sederhana terhadap kelayakan hasil.
----
+
 
 # 5. Panduan Kompilasi
 
