@@ -268,7 +268,7 @@ Determinan dihitung menggunakan rumus:
 
 det = a(ei - fh) - b(di - fg) + c(dh - eg)
 
-Dan setiap minor (operasi pengurangan dalam kurung) dihitung menggunakan fungsi minor2x2().
+Dan setiap minor (operasi pengurangan yang didalam kurung) dihitung menggunakan fungsi minor2x2().
 
 ### 3. Fungsi gantiKolom()
 
