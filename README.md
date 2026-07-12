@@ -33,6 +33,7 @@ Dengan modal awal dan target penduduk, diperoleh dua persamaan linear:
 
 Jika modal awal yang diberikan pada program adalah **$10.000** dan target penduduk **100.000 jiwa**, maka SPL menjadi:
 1000x + 3000y = 10000
+
 15000x + 20000y = 100000
 
 ## Bentuk Matriks (Ax = b)
@@ -87,6 +88,8 @@ Pada program, nilai variabel dipetakan sebagai berikut:
 - b = biayaY = 3000
 - c = kapasitasX = 15000
 - d = kapasitasY = 20000
+- M = Modal awal
+- P = Penduduk
 
 Selanjutnya dihitung:
 Dx = (M × d) - (b × P)
@@ -125,8 +128,10 @@ Solusi SPL:
 
 ## b. Apakah Hasilnya Masuk Akal Secara Fisik?
 Hasil tersebut **tidak masuk akal secara fisik**, karena jumlah toko tidak mungkin bernilai negatif.
+
 Walaupun nilai x = 8 merupakan bilangan bulat positif, nilai y = -1 menunjukkan bahwa sistem persamaan memerlukan "jumlah toko negatif" agar kedua persamaan terpenuhi. Hal tersebut tidak mungkin terjadi dalam dunia nyata.
-Secara matematis, solusi SPL memang benar. Namun secara praktis, kombinasi modal sebesar **$5.000** dengan target pelayanan **100.000 penduduk** tidak dapat direalisasikan menggunakan data biaya dan kapasitas yang diberikan.
+
+Secara praktis, kombinasi modal sebesar **$5.000** dengan target pelayanan **100.000 penduduk** tidak dapat direalisasikan menggunakan data biaya dan kapasitas yang diberikan.
 Karena itu program memberikan peringatan bahwa hasil perhitungan tidak layak diterapkan.
 Contoh pesan yang ditampilkan program:
 
