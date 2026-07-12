@@ -354,7 +354,7 @@ Pada pengujian ini, matriks koefisien tetap menggunakan data pada soal, sedangka
 
 Input yang digunakan:
 
-Matriks koefisien:
+Matriks koefisien (tetap):
 
 ```text
 | 2  1  1 |
@@ -362,38 +362,39 @@ Matriks koefisien:
 | 1  1  2 |
 ```
 
-Vektor konstanta:
+Vektor konstanta (diubah):
 
 ```text
-| 5000 |
-|16000 |
-|15000 |
+|  5000 |
+| 16000 |
+| 15000 |
 ```
 
-Hasil perhitungan program:
+Hasil perhitungan program (sesuai tangkapan layar):
 
-- D = 4,00
-- Dx = -14000,00 sehingga x = -3500,00
-- Dy = 32000,00 sehingga y = 8000,00
-- Dz = 28000,00 sehingga z = 7000,00
+- Determinan utama: D = 4.00
+- Dx = -16000.00 sehingga x = -4000.00
+- Dy = 28000.00 sehingga y = 7000.00
+- Dz = 24000.00 sehingga z = 6000.00
 
 Solusi SPL:
 
-- x = -3500
-- y = 8000
-- z = 7000
+- x = -4000
+- y = 7000
+- z = 6000
 
 ## b. Apakah Hasilnya Masuk Akal Secara Fisik?
 
-Hasil tersebut tidak masuk akal secara fisik karena profit per ton pupuk tidak mungkin bernilai negatif.
+Hasil tersebut tidak masuk akal secara fisik karena:
 
-Nilai x = -3500 menunjukkan bahwa data yang dimasukkan tidak konsisten secara ekonomi. Dengan total profit Blok 1 yang terlalu kecil dibandingkan blok lainnya, sistem persamaan memaksa nilai profit pupuk A menjadi negatif agar seluruh persamaan tetap terpenuhi.
+- Profit per ton pupuk tidak mungkin bernilai negatif. Dalam kasus ini, x = -4000 (Profit per ton Pupuk A) bernilai negatif.
+- Secara logika bisnis, harga atau keuntungan per ton seharusnya berupa angka positif atau minimal nol.
 
-Program pada Kasus 2 belum memberikan peringatan untuk solusi negatif. Oleh karena itu pengguna sebaiknya:
+Makna matematis dan ekonomis:
 
-- Memeriksa kembali data input.
-- Memastikan data tonase dan total profit konsisten.
-- Menyadari bahwa solusi negatif tidak dapat diterapkan dalam kondisi nyata.
+Dengan menurunkan total profit Blok 1 dari $17.000 menjadi hanya $5.000, sedangkan Blok 2 dan Blok 3 tetap sebesar $16.000 dan $15.000, sistem persamaan dipaksa untuk menyeimbangkan nilai pada ketiga persamaan. Karena Blok 1 memiliki komposisi tonase yang sama, yaitu 2 ton Pupuk A, 1 ton Pupuk B, dan 1 ton Pupuk C, tetapi menghasilkan profit yang jauh lebih kecil, maka nilai profit per ton Pupuk A harus bernilai negatif agar semua persamaan tetap terpenuhi.
+
+Hal ini menunjukkan bahwa data yang dimasukkan tidak konsisten secara ekonomi sehingga solusi yang dihasilkan memang benar secara matematis, tetapi tidak dapat diterapkan dalam kondisi nyata.
 
 ## c. Skenario Lain: Mengubah Koefisien Menjadi Identik
 
