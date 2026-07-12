@@ -385,16 +385,11 @@ Solusi SPL:
 
 ## b. Apakah Hasilnya Masuk Akal Secara Fisik?
 
-Hasil tersebut tidak masuk akal secara fisik karena:
-
-- Profit per ton pupuk tidak mungkin bernilai negatif. Dalam kasus ini, x = -4000 (Profit per ton Pupuk A) bernilai negatif.
-- Secara logika bisnis, harga atau keuntungan per ton seharusnya berupa angka positif atau minimal nol.
-
-Makna matematis dan ekonomis:
+Hasil tersebut tidak masuk akal secara fisik karena profit per ton pupuk tidak mungkin bernilai negatif. Dalam kasus ini, x = -4000 (Profit per ton Pupuk A) bernilai negatif. Seharusnya harga atau keuntungan per ton seharusnya berupa angka positif atau minimal nol.
 
 Dengan menurunkan total profit Blok 1 dari $17.000 menjadi hanya $5.000, sedangkan Blok 2 dan Blok 3 tetap sebesar $16.000 dan $15.000, sistem persamaan dipaksa untuk menyeimbangkan nilai pada ketiga persamaan. Karena Blok 1 memiliki komposisi tonase yang sama, yaitu 2 ton Pupuk A, 1 ton Pupuk B, dan 1 ton Pupuk C, tetapi menghasilkan profit yang jauh lebih kecil, maka nilai profit per ton Pupuk A harus bernilai negatif agar semua persamaan tetap terpenuhi.
 
-Hal ini menunjukkan bahwa data yang dimasukkan tidak konsisten secara ekonomi sehingga solusi yang dihasilkan memang benar secara matematis, tetapi tidak dapat diterapkan dalam kondisi nyata.
+Hal ini menunjukkan bahwa data yang dimasukkan tidak konsisten sehingga solusi yang dihasilkan memang benar secara matematis, tetapi tidak dapat diterapkan dalam kondisi nyata.
 
 ## c. Skenario Lain: Mengubah Koefisien Menjadi Identik
 
