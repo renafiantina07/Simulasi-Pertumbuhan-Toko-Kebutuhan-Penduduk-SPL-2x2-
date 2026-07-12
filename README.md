@@ -54,7 +54,7 @@ Kode program ditulis dalam bahasa C dan hanya menggunakan fungsi main(). Konsep 
    - modal dan penduduk sebagai input dari pengguna.
    - biayaX, biayaY, kapasitasX, dan kapasitasY sebagai konstanta tetap sesuai soal.
 
-2. **Input interaktif**
+2. **Input modal dan penduduk**
    - Pengguna diminta memasukkan nilai modal dan jumlah penduduk melalui terminal.
 
 3. **Menampilkan SPL**
