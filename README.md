@@ -32,6 +32,7 @@ Dengan modal awal dan target penduduk, diperoleh dua persamaan linear:
    15000x + 20000y = target penduduk
 
 Jika modal awal yang diberikan pada program adalah **$10.000** dan target penduduk **100.000 jiwa**, maka SPL menjadi:
+
 1000x + 3000y = 10000
 
 15000x + 20000y = 100000
@@ -106,7 +107,7 @@ Jika D ≠ 0, matriks koefisien memiliki invers sehingga solusi dapat dihitung m
 Sebaliknya, jika D = 0, maka terdapat dua kemungkinan:
 - SPL tidak memiliki solusi.
 - SPL memiliki tak hingga banyak solusi.
-Selain itu, dalam implementasi program, apabila D = 0 maka proses pembagian Dx/D maupun Dy/D akan menyebabkan **division by zero** sehingga menghasilkan error atau nilai `inf`. Oleh karena itu, program harus memeriksa nilai determinan terlebih dahulu sebelum menghitung solusi.
+Selain itu, dalam implementasi program, apabila D = 0 maka proses pembagian Dx/D maupun Dy/D akan menyebabkan error. Oleh karena itu, program harus memeriksa nilai determinan terlebih dahulu sebelum menghitung solusi.
 
 ---
 
@@ -114,8 +115,8 @@ Selain itu, dalam implementasi program, apabila D = 0 maka proses pembagian Dx/D
 
 ## a. Uji Coba Parameter: Modal $5.000 dengan Penduduk Tetap 100.000 Jiwa
 Input yang diberikan:
-- **Modal** = `5000`
-- **Penduduk** = `100000`
+- **Modal** = 5000
+- **Penduduk** = 100000
 
 Hasil perhitungan program:
 - D = -25.000.000,00
